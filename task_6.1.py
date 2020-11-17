@@ -1,7 +1,7 @@
 # Задача №1 "Ферма Дядюшки Джо"
 
 # noinspection NonAsciiCharacters
-class Animal:
+class Goose:
     product = 0
 
     def __init__(self, kind, name, animal_says, weight_anim):
@@ -20,7 +20,41 @@ class Animal:
             self.product -= 1
             self.weight -= self.weight / 15
         else:
-            print(f"{self.__kind} {self.name} животное голодное\n надо покормить")
+            print(f"Гусь {self.name} голодный\n надо покормить")
+
+    def get_kind(self):
+        return self.__kind
+
+    def get_name(self):
+        return self.name
+
+    def get_product(self):
+        return self.product
+
+    def get_weight(self):
+        return self.weight
+    
+
+class Cow:
+    product = 0
+
+    def __init__(self, kind, name, animal_says, weight_anim):
+        self.__kind = kind
+        self.name = name
+        self.__animal_says = animal_says
+        self.weight = weight_anim
+
+    def set_feed(self, food):
+        self.weight += food
+        self.product += 1
+        return self.__kind + " " + self.name + " накормлена"
+
+    def set_product(self):
+        if self.product > 0:
+            self.product -= 1
+            self.weight -= self.weight / 15
+        else:
+            print(f"Корова {self.name} голодный\n надо покормить")
 
     def get_kind(self):
         return self.__kind
@@ -35,16 +69,152 @@ class Animal:
         return self.weight
 
 
-animal_dict = {'Серый': Animal("Гусь", "Серый", "га-га-га", 3.8),
-               'Белый': Animal("Гусь", "Белый", "га-га-га", 3.8),
-               'Манька': Animal("Корова", "Манька", "муууу", 720),
-               'Барашек': Animal("Баран", "Барашек", "беэээ", 160),
-               'Кудрявый': Animal("Баран", "Кудрявый", "беэээ", 160),
-               'Ко-ко': Animal("Курица", "Ко-ко", "ко-ко- ко", 2.8),
-               'Кукареку': Animal("Курица", "Кукареку", "ко-ко- ко", 2.8),
-               'Рога': Animal("Коза", "Рога", "меэээээ", 170),
-               'Копыта': Animal("Коза", "Копыта", "меэээ", 170),
-               'Кряква': Animal("Утка", "Кряква", "кря-кря-кря", 3.1)}
+class Sheep:
+    product = 0
+
+    def __init__(self, kind, name, animal_says, weight_anim):
+        self.__kind = kind
+        self.name = name
+        self.__animal_says = animal_says
+        self.weight = weight_anim
+
+    def set_feed(self, food):
+        self.weight += food
+        self.product += 1
+        return self.__kind + " " + self.name + " накормлена"
+
+    def set_product(self):
+        if self.product > 0:
+            self.product -= 1
+            self.weight -= self.weight / 15
+        else:
+            print(f"Овца {self.name} голодный\n надо покормить")
+
+    def get_kind(self):
+        return self.__kind
+
+    def get_name(self):
+        return self.name
+
+    def get_product(self):
+        return self.product
+
+    def get_weight(self):
+        return self.weight
+
+
+class Chicken:
+    product = 0
+
+    def __init__(self, kind, name, animal_says, weight_anim):
+        self.__kind = kind
+        self.name = name
+        self.__animal_says = animal_says
+        self.weight = weight_anim
+
+    def set_feed(self, food):
+        self.weight += food
+        self.product += 1
+        return self.__kind + " " + self.name + " накормлена"
+
+    def set_product(self):
+        if self.product > 0:
+            self.product -= 1
+            self.weight -= self.weight / 15
+        else:
+            print(f"Курица {self.name} голодный\n надо покормить")
+
+    def get_kind(self):
+        return self.__kind
+
+    def get_name(self):
+        return self.name
+
+    def get_product(self):
+        return self.product
+
+    def get_weight(self):
+        return self.weight
+
+
+class Goat:
+    product = 0
+
+    def __init__(self, kind, name, animal_says, weight_anim):
+        self.__kind = kind
+        self.name = name
+        self.__animal_says = animal_says
+        self.weight = weight_anim
+
+    def set_feed(self, food):
+        self.weight += food
+        self.product += 1
+        return self.__kind + " " + self.name + " накормлена"
+
+    def set_product(self):
+        if self.product > 0:
+            self.product -= 1
+            self.weight -= self.weight / 15
+        else:
+            print(f"Коза {self.name} голодный\n надо покормить")
+
+    def get_kind(self):
+        return self.__kind
+
+    def get_name(self):
+        return self.name
+
+    def get_product(self):
+        return self.product
+
+    def get_weight(self):
+        return self.weight
+
+
+class Duck:
+    product = 0
+
+    def __init__(self, kind, name, animal_says, weight_anim):
+        self.__kind = kind
+        self.name = name
+        self.__animal_says = animal_says
+        self.weight = weight_anim
+
+    def set_feed(self, food):
+        self.weight += food
+        self.product += 1
+        return self.__kind + " " + self.name + " накормлена"
+
+    def set_product(self):
+        if self.product > 0:
+            self.product -= 1
+            self.weight -= self.weight / 15
+        else:
+            print(f"Утка {self.name} голодный\n надо покормить")
+
+    def get_kind(self):
+        return self.__kind
+
+    def get_name(self):
+        return self.name
+
+    def get_product(self):
+        return self.product
+
+    def get_weight(self):
+        return self.weight
+
+
+animal_dict = {'Серый': Goose("Гусь", "Серый", "га-га-га", 3.8),
+               'Белый': Goose("Гусь", "Белый", "га-га-га", 2.8),
+               'Манька': Cow("Корова", "Манька", "муууу", 720),
+               'Барашек': Sheep("Баран", "Барашек", "беэээ", 160),
+               'Кудрявый': Sheep("Баран", "Кудрявый", "беэээ", 160),
+               'Ко-ко': Chicken("Курица", "Ко-ко", "ко-ко- ко", 2.8),
+               'Кукареку': Chicken("Курица", "Кукареку", "ко-ко- ко", 2.8),
+               'Рога': Goat("Коза", "Рога", "меэээээ", 170),
+               'Копыта': Goat("Коза", "Копыта", "меэээ", 170),
+               'Кряква': Duck("Утка", "Кряква", "кря-кря-кря", 3.1)}
 
 
 def main():
@@ -95,9 +265,24 @@ def add_animal(arg):
             kind = input("Введите вид животног: ").title()
             animal_says = input("Что говорит животное?: ").title()
             weight_anim = float(input("Введите вес животног в кг: "))
-
-            animals = Animal(kind, chose, animal_says, weight_anim)
-            arg[chose] = animals
+            if kind == "Гусь":
+                animals = Goose(kind, chose, animal_says, weight_anim)
+                arg[chose] = animals
+            elif kind == "Корова":
+                animals = Cow(kind, chose, animal_says, weight_anim)
+                arg[chose] = animals
+            elif kind == "Баран" or kind == "Овца":
+                animals = Sheep(kind, chose, animal_says, weight_anim)
+                arg[chose] = animals
+            elif kind == "Купица":
+                animals = Chicken(kind, chose, animal_says, weight_anim)
+                arg[chose] = animals
+            elif kind == "Коза":
+                animals = Goat(kind, chose, animal_says, weight_anim)
+                arg[chose] = animals
+            elif kind == "Утка":
+                animals = Duck(kind, chose, animal_says, weight_anim)
+                arg[chose] = animals
         else:
             print("Животное с таким именем существует")
             print("Попробуйте другое имя")
